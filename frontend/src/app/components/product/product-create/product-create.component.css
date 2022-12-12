@@ -1,0 +1,17 @@
+.card {
+    display: block;
+    padding: 10px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-right: 10px;
+}

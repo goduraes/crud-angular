@@ -1,0 +1,25 @@
+<mat-card class="card">
+    <mat-card-title class="title">{{title}}</mat-card-title>
+    <form [formGroup]="productForm" (ngSubmit)="action()">
+        <div>
+            <mat-form-field>
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="name" name="name" required>
+                <mat-error *ngIf="productForm.controls.name.invalid">{{ErrorMessage}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Preço (R$)</mat-label>
+                <input matInput formControlName="price" type="number" name="price" required>
+                <mat-error *ngIf="productForm.controls.price.invalid">{{ErrorMessage}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <button mat-raised-button type="submit" color="{{btnColor}}">
+            {{btntxt}}
+        </button>
+        <button mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
+    </form>
+</mat-card>
